@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="260" viewBox="0 0 800 260" role="img" aria-label="Quest log and lore">
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000" opacity="0.28"/>
+    </pattern>
+    <radialGradient id="vig" cx="50%" cy="50%" r="75%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="260" fill="#0D1117"/>
+
+  <!-- Outer double border -->
+  <g fill="none" filter="url(#glow)">
+    <rect x="6" y="6" width="788" height="248" stroke="#39FF14" stroke-width="2">
+      <animate attributeName="opacity" values="1;0.55;1" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="12" y="12" width="776" height="236" stroke="#39FF14" stroke-width="1" opacity="0.7"/>
+  </g>
+
+  <!-- Pixel corner accents -->
+  <g fill="#FFB000">
+    <rect x="2" y="2" width="10" height="10"/><rect x="788" y="2" width="10" height="10"/>
+    <rect x="2" y="248" width="10" height="10"/><rect x="788" y="248" width="10" height="10"/>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="16" y="16" width="768" height="28" fill="#39FF14" opacity="0.14"/>
+  <line x1="16" y1="44" x2="784" y2="44" stroke="#39FF14" stroke-width="2"/>
+  <text x="28" y="35" font-family="'Courier New', Courier, monospace" font-size="15" font-weight="bold" fill="#39FF14" filter="url(#glow)" xml:space="preserve">[ LOG://ACTIVE_QUESTS_&amp;_LORE.TXT ]</text>
+  <g stroke-width="2" fill="none">
+    <rect x="726" y="22" width="16" height="16" stroke="#00F0FF"/>
+    <rect x="731" y="31" width="6" height="2" fill="#00F0FF" stroke="none"/>
+    <rect x="750" y="22" width="16" height="16" stroke="#FFB000"/>
+    <path d="M755 27 L761 33 M761 27 L755 33" stroke="#FFB000"/>
+  </g>
+
+  <!-- Body -->
+  <g font-family="'Courier New', Courier, monospace" font-size="15" xml:space="preserve">
+    <text x="36" y="80"><tspan fill="#FFB000" font-weight="bold">&gt; CURRENTLY:</tspan><tspan fill="#39FF14"> Building hardware experiments &amp; software side projects.</tspan></text>
+
+    <text x="36" y="116"><tspan fill="#FFB000" font-weight="bold">&gt; SKILL TREE:</tspan><tspan fill="#39FF14"> Reverse-engineering how ML models work under the hood.</tspan></text>
+
+    <text x="36" y="152"><tspan fill="#FFB000" font-weight="bold">&gt; CO-OP MODE:</tspan><tspan fill="#39FF14"> Open to collaborating on interesting real-world problems.</tspan></text>
+
+    <text x="36" y="188"><tspan fill="#00F0FF" font-weight="bold">&gt; LORE / FUN FACT:</tspan><tspan fill="#39FF14"> Into CS since childhood—still more excited</tspan></text>
+    <text x="36" y="210"><tspan fill="#39FF14">  by a good bug than a clean build.</tspan></text>
+  </g>
+
+  <!-- Blinking cursor after last line (15px font -> 9px/char; 36 + 35*9 = 351) -->
+  <rect x="354" y="196" width="9" height="15" fill="#39FF14" filter="url(#glow)">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Footer divider -->
+  <line x1="24" y1="222" x2="776" y2="222" stroke="#39FF14" stroke-width="1" opacity="0.4" stroke-dasharray="4 4"/>
+
+  <!-- Footer prompt -->
+  <text x="772" y="241" text-anchor="end" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="bold" fill="#FFB000" filter="url(#glow)" xml:space="preserve">[ PRESS START TO COLLABORATE ▼ ]
+    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- CRT overlay -->
+  <rect width="800" height="260" fill="url(#scan)" pointer-events="none"/>
+  <rect width="800" height="260" fill="url(#vig)" pointer-events="none"/>
+  <rect width="800" height="6" fill="#39FF14" opacity="0.06">
+    <animate attributeName="y" values="-6;260" dur="6s" repeatCount="indefinite"/>
+  </rect>
+</svg>

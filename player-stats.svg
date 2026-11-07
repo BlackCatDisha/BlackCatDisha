@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="260" viewBox="0 0 800 260" role="img" aria-label="Player stats card for Disha">
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000" opacity="0.28"/>
+    </pattern>
+    <radialGradient id="vig" cx="50%" cy="50%" r="75%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="260" fill="#0D1117"/>
+
+  <!-- Outer double border -->
+  <g fill="none" filter="url(#glow)">
+    <rect x="6" y="6" width="788" height="248" stroke="#39FF14" stroke-width="2">
+      <animate attributeName="opacity" values="1;0.55;1" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="12" y="12" width="776" height="236" stroke="#39FF14" stroke-width="1" opacity="0.7"/>
+  </g>
+
+  <!-- Pixel corner accents -->
+  <g fill="#FFB000">
+    <rect x="2" y="2" width="10" height="10"/><rect x="788" y="2" width="10" height="10"/>
+    <rect x="2" y="248" width="10" height="10"/><rect x="788" y="248" width="10" height="10"/>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="16" y="16" width="768" height="28" fill="#39FF14" opacity="0.14"/>
+  <line x1="16" y1="44" x2="784" y2="44" stroke="#39FF14" stroke-width="2"/>
+  <text x="28" y="35" font-family="'Courier New', Courier, monospace" font-size="15" font-weight="bold" fill="#39FF14" filter="url(#glow)" xml:space="preserve">[ SYSTEM://PLAYER_PROFILE.EXE ]</text>
+  <!-- Fake window buttons -->
+  <g stroke-width="2" fill="none">
+    <rect x="726" y="22" width="16" height="16" stroke="#00F0FF"/>
+    <rect x="731" y="31" width="6" height="2" fill="#00F0FF" stroke="none"/>
+    <rect x="750" y="22" width="16" height="16" stroke="#FFB000"/>
+    <path d="M755 27 L761 33 M761 27 L755 33" stroke="#FFB000"/>
+  </g>
+
+  <!-- Avatar panel -->
+  <rect x="30" y="62" width="220" height="176" fill="none" stroke="#00F0FF" stroke-width="2" opacity="0.9"/>
+  <rect x="35" y="67" width="210" height="166" fill="none" stroke="#00F0FF" stroke-width="1" opacity="0.5"/>
+
+  <!-- Microchip emblem -->
+  <g filter="url(#glow)">
+    <!-- pins -->
+    <g fill="#FFB000">
+      <rect x="95" y="98" width="6" height="14"/><rect x="113" y="98" width="6" height="14"/><rect x="131" y="98" width="6" height="14"/><rect x="149" y="98" width="6" height="14"/><rect x="167" y="98" width="6" height="14"/>
+      <rect x="95" y="188" width="6" height="14"/><rect x="113" y="188" width="6" height="14"/><rect x="131" y="188" width="6" height="14"/><rect x="149" y="188" width="6" height="14"/><rect x="167" y="188" width="6" height="14"/>
+      <rect x="81" y="118" width="14" height="6"/><rect x="81" y="136" width="14" height="6"/><rect x="81" y="154" width="14" height="6"/><rect x="81" y="172" width="14" height="6"/>
+      <rect x="173" y="118" width="14" height="6"/><rect x="173" y="136" width="14" height="6"/><rect x="173" y="154" width="14" height="6"/><rect x="173" y="172" width="14" height="6"/>
+    </g>
+    <!-- body -->
+    <rect x="92" y="112" width="84" height="76" fill="#0D1117" stroke="#39FF14" stroke-width="3"/>
+    <rect x="100" y="120" width="68" height="60" fill="none" stroke="#39FF14" stroke-width="1" opacity="0.6"/>
+    <!-- pin-1 notch -->
+    <rect x="96" y="116" width="6" height="6" fill="#39FF14"/>
+    <!-- oscilloscope wave -->
+    <polyline points="104,150 112,150 118,132 126,168 134,132 142,168 150,132 156,150 164,150" fill="none" stroke="#00F0FF" stroke-width="2.5" stroke-linejoin="miter">
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.6s" repeatCount="indefinite"/>
+    </polyline>
+  </g>
+  <text x="140" y="228" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="12" fill="#00F0FF" opacity="0.85" xml:space="preserve">HP ████████ MP ██████░░</text>
+
+  <!-- Stats box (double frame) -->
+  <g fill="none" filter="url(#glow)">
+    <rect x="272" y="62" width="498" height="176" stroke="#39FF14" stroke-width="2">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="278" y="68" width="486" height="164" stroke="#39FF14" stroke-width="1" opacity="0.6"/>
+  </g>
+  <g fill="#FFB000">
+    <rect x="268" y="58" width="8" height="8"/><rect x="766" y="58" width="8" height="8"/>
+    <rect x="268" y="234" width="8" height="8"/><rect x="766" y="234" width="8" height="8"/>
+  </g>
+
+  <g font-family="'Courier New', Courier, monospace" font-size="17" xml:space="preserve">
+    <text x="296" y="108"><tspan fill="#FFB000">PLAYER</tspan><tspan fill="#39FF14"> : </tspan><tspan fill="#00F0FF">Disha</tspan></text>
+    <text x="296" y="145"><tspan fill="#FFB000">CLASS </tspan><tspan fill="#39FF14"> : </tspan><tspan fill="#00F0FF">CS Engineer</tspan></text>
+    <text x="296" y="182"><tspan fill="#FFB000">LEVEL </tspan><tspan fill="#39FF14"> : </tspan><tspan fill="#00F0FF">Semester 3</tspan></text>
+    <text x="296" y="219"><tspan fill="#FFB000">QUEST </tspan><tspan fill="#39FF14"> : </tspan><tspan fill="#39FF14">Make things that measure reality</tspan></text>
+  </g>
+
+  <!-- Blinking block cursor at end of QUEST line (char width 10.2px; text ends near x=296+41*10.2) -->
+  <rect x="716" y="205" width="10" height="17" fill="#39FF14" filter="url(#glow)">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- CRT overlay -->
+  <rect width="800" height="260" fill="url(#scan)" pointer-events="none"/>
+  <rect width="800" height="260" fill="url(#vig)" pointer-events="none"/>
+  <rect width="800" height="6" fill="#39FF14" opacity="0.06">
+    <animate attributeName="y" values="-6;260" dur="6s" repeatCount="indefinite"/>
+  </rect>
+</svg>

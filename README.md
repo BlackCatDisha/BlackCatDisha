@@ -1,8 +1,8 @@
-- 👋 Hi, I’m @BlackCatDisha
+<!-- - 👋 Hi, I’m @BlackCatDisha
 - 👀 I’m interested in programming, playing the piano, painting, photography and other random stuff...
 - 🌱 I’m currently learning Java, Python, C++
 - 🤝 I’m looking to collaborate on ... (well, I still have to think about what ¯\_(ツ)_/¯ )
-- 📫 How to reach me: gndisha810@gmail.com
+- 📫 How to reach me: gndisha810@gmail.com -->
 ![Player Stats](./player-stats.svg)
 ![Quest Log](./quest-log.svg)
 <!---
